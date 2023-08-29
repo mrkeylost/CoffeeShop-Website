@@ -1,0 +1,538 @@
+/* Nikolaus Chandra - 2502011404*/
+/* Weiner - 2502011455 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&family=Poppins:wght@700&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=EB+Garamond:wght@700&family=Roboto+Mono:wght@300&display=swap');
+
+
+*, *::before, *::after{
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease;
+}
+
+body{
+    background: black;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Start Home Page */
+
+/*================================================================ Header ============================================ */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 20px 80px;
+    height: 80px;
+    background-color: rgba(250, 250, 250, 0.05);;
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(0 -10px 50px gray);
+}
+
+/*================================================================ Navigation Bar ============================================ */
+
+header .logo{
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    color: white;
+    top: 0;
+    left: 0;
+}
+
+header .logo span{
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    color: burlywood;
+    top: 0;
+    left: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner{
+    /* width: 60%; */
+    margin: 0 auto;
+}
+
+.nav-icons{
+    display: none;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li a{
+    color: white;
+    padding: 1em 1.5em;
+}
+
+.close{
+    display: none;
+    color: white;
+    top: 30px;
+    left: 30px;
+    position: absolute;
+    font-size: 30px;
+}
+
+li a:hover{
+    color: orange;
+    border-bottom: .1rem solid orange;
+    padding-bottom: 1.2rem;
+}
+
+li .show{
+    font-weight: bold;
+    color: orange;
+    position: relative;
+}
+
+li .show:before {
+        content: '';
+        position: absolute;
+        bottom : 0;
+        left : 0;
+        width: 100%;
+        background: orange;
+        height: .3em;
+}
+
+.search-label{
+    display: none;
+    padding: 0 50px;
+}
+
+.search-label input{
+    font-size: 15px;
+    height: 2.125rem;
+    padding: 0 1.25em;
+    /* width: 100%; */
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+}
+
+.search-label button{
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: white;
+    background-color: rgb(98, 159, 6, 1);
+    padding: 0px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.search-label button:hover{
+    background-color: green;
+}
+
+/*======================================================== Sticky========================================= */
+
+.scroll-down header{
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header{
+    filter: drop-shadow(0 -10px 50px gray);
+    background-color: black;
+}
+
+.scroll-up .search-label{
+    display: flex;
+}
+
+/* Home */
+.home{
+    min-height: 100vh;
+}
+
+/* ===================================================scroll bar ======================================*/
+
+::-webkit-scrollbar{
+    width: 11px;
+    height: 11px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    background-color: rgb(52, 45, 45);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: gray;
+}
+
+/* Footer */
+
+/* ================================================ Footer Column ============================================================ */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    background-image: url("../images/footer.jpg");
+    opacity: 3;
+    padding: 40px 30px 60px;
+    border-top: 1px solid white;
+}
+
+footer .columns{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin-left: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.columns a{
+    color: rgb(182, 179, 179);
+    margin-bottom: 20px;
+}
+
+
+.columns h4{
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.columns p{
+    font-size: 13px;
+    padding-bottom: 12px;
+}
+
+.columns a:hover{
+    border-bottom: .1rem solid rgb(182, 179, 179);
+    padding-bottom: 0.01rem;
+}
+
+
+/* =============================================================== Logo and Copyright ========================================== */
+
+.closing .logo{
+    color: white;
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+.closing .logo span{
+    color: burlywood;
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+footer .closing{
+    width: 100%;
+    /* display: flex; */
+    border-top: 1px solid white;
+}
+
+.closing .logo-close{
+    font-size: 60px;
+}
+
+.closing p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.closing .contact{
+    padding-top: 20px;
+    align-items: center;
+}
+
+.closing .contact i{
+    font-size: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.closing .contact i:hover{
+    color: rgb(27, 147, 89);
+}
+
+/* Start Register Page */
+
+.register-page{
+   background-color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 120vh;
+   margin: 0;
+}
+
+.signup-form{
+    background-color: white;
+    border: 1px solid rgb(183, 178, 178);
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.3);
+    width: 400px;
+    max-width: 100%;
+    padding: 24px 40px 12px;
+    margin: 120px 120px;
+}
+
+.form-title{
+    text-align: center;
+}
+
+.form-title h2{
+    padding-bottom: 5px;
+}
+
+.form-title h4 span{
+    color: rgb(9, 182, 9);
+    cursor: pointer;
+}
+
+form{
+    padding: 30px 40px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input{
+    border: 1px solid rgb(186, 180, 180);
+    border-radius: 5px;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-term{
+    padding: 30px;
+}
+
+.form-term label{
+    color: rgb(60, 99, 1);
+}
+
+.register button{
+    background-color: rgb(186, 180, 180);
+    border: 2px solid transparent;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register button:hover{
+    background-color: gray;
+    color: white;
+}
+
+.image-form{
+    margin-top: 120px;
+}
+
+.image-form img{
+    border: 8px solid transparent;
+    box-shadow: 0 0 0 8px white;
+    border-radius: 30px;
+}
+
+/* End Register Page */
+
+
+/*========================================================= Media Screen 1120 Laptop Mini ============================================*/
+@media screen and (max-width: 1250px){
+
+    header{
+        background-color: black;
+    }
+
+    /* ========================= navbar ============================ */
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: black;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+    }
+
+    .nav-menu .search-label{
+        display: none;
+    }
+
+    .close{
+        display: flex;
+        align-items: center;
+    }
+
+    nav .active{
+        right: -50px;
+        transition: 0.5s ease;
+    }
+
+    .nav-menu li{
+        margin-bottom: 25px;
+    }
+
+    .nav-icons{
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+
+    .nav-icons i{
+        color: white;
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    /* ========================== Footer ============================ */
+
+    .closing p {
+        text-align: left;
+        font-size: 10px;
+        padding-top: 5px;
+    }
+
+    .closing .logo-close {
+        font-size: 30px;
+    }
+
+    .closing .contact i {
+        font-size: 20px;
+    }
+
+    /* Start Registration Page */
+
+    .register-page{
+       flex-wrap: wrap;
+     }
+
+     .signup-form {
+        width: 100%;
+    }
+
+    /* End Registration Page */
+
+}
+
+/*========================================================= Media Screen 830 tablet ==============================================*/
+
+@media screen and (max-width : 830px){
+
+    /* Header */
+
+    header {
+        padding: 20px 50px;
+        height: 60px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header .logo span{
+        font-size: 1.5rem;
+    }
+
+
+    /* ========================= navbar ============================ */
+
+    .nav-icons i {
+        font-size: 20px;
+    }
+
+    /* Start Registration Page */
+ 
+      .signup-form {
+          justify-content: center;
+         width: 100%;
+     }
+
+     .image-form img{
+       display: none;
+    }
+ 
+     /* End Registration Page */
+
+}
+
+/*========================================================= Media Screen 500 Mobile ============================================*/
+
+@media screen and (max-width : 500px) {
+
+    /* Header */
+
+    .flex {
+        padding: 0px 0px;
+    }
+
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .logo span{
+        font-size: 1rem;
+    }
+
+}

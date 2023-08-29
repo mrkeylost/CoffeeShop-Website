@@ -1,0 +1,677 @@
+/* Nikolaus Chandra - 2502011404*/
+/* Weiner - 2502011455 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&family=Poppins:wght@700&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=EB+Garamond:wght@700&family=Roboto+Mono:wght@300&display=swap');
+
+
+*, *::before, *::after{
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease;
+}
+
+body{
+    background: black;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Start Home Page */
+
+/*================================================================ Header ============================================ */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 20px 80px;
+    height: 80px;
+    background-color: rgba(250, 250, 250, 0.05);;
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(0 -10px 50px gray);
+}
+
+/*================================================================ Navigation Bar ============================================ */
+
+header .logo{
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    color: white;
+    top: 0;
+    left: 0;
+}
+
+header .logo span{
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    color: burlywood;
+    top: 0;
+    left: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner{
+    /* width: 60%; */
+    margin: 0 auto;
+}
+
+.nav-icons{
+    display: none;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li a{
+    color: white;
+    padding: 1em 1.5em;
+}
+
+.close{
+    display: none;
+    color: white;
+    top: 30px;
+    left: 30px;
+    position: absolute;
+    font-size: 30px;
+}
+
+li a:hover{
+    color: orange;
+    border-bottom: .1rem solid orange;
+    padding-bottom: 1.2rem;
+}
+
+li .show{
+    font-weight: bold;
+    color: orange;
+    position: relative;
+}
+
+li .show:before {
+        content: '';
+        position: absolute;
+        bottom : 0;
+        left : 0;
+        width: 100%;
+        background: orange;
+        height: .3em;
+}
+
+.search-label{
+    display: none;
+    padding: 0 50px;
+}
+
+.search-label input{
+    font-size: 15px;
+    height: 2.125rem;
+    padding: 0 1.25em;
+    /* width: 100%; */
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+}
+
+.search-label button{
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: white;
+    background-color: rgb(98, 159, 6, 1);
+    padding: 0px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.search-label button:hover{
+    background-color: green;
+}
+
+/*======================================================== Sticky========================================= */
+
+.scroll-down header{
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header{
+    filter: drop-shadow(0 -10px 50px gray);
+    background-color: black;
+}
+
+.scroll-up .search-label{
+    display: flex;
+}
+
+/* Home */
+.home{
+    min-height: 100vh;
+}
+
+
+/* ===================================================scroll bar ======================================*/
+
+::-webkit-scrollbar{
+    width: 11px;
+    height: 11px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    background-color: rgb(52, 45, 45);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: gray;
+}
+
+
+/* Footer */
+
+/* ================================================ Footer Column ============================================================ */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    background-image: url("../images/footer.jpg");
+    opacity: 3;
+    padding: 40px 30px 60px;
+    border-top: 1px solid white;
+}
+
+footer .columns{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin-left: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.columns a{
+    color: rgb(182, 179, 179);
+    margin-bottom: 20px;
+}
+
+
+.columns h4{
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.columns p{
+    font-size: 13px;
+    padding-bottom: 12px;
+}
+
+.columns a:hover{
+    border-bottom: .1rem solid rgb(182, 179, 179);
+    padding-bottom: 0.01rem;
+}
+
+
+/* =============================================================== Logo and Copyright ========================================== */
+
+.closing .logo{
+    color: white;
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+.closing .logo span{
+    color: burlywood;
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: bold; 
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+footer .closing{
+    width: 100%;
+    /* display: flex; */
+    border-top: 1px solid white;
+}
+
+.closing .logo-close{
+    font-size: 60px;
+}
+
+.closing p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.closing .contact{
+    padding-top: 20px;
+    align-items: center;
+}
+
+.closing .contact i{
+    font-size: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.closing .contact i:hover{
+    color: rgb(27, 147, 89);
+}
+
+/* Start About Page */
+
+/*=================================== Top Header ==========================================*/
+.about-top .img-about{
+    background-image: url(../images/bgabout.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-about{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    font-weight: 400;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* ==================================== about us ======================================== */
+
+.about-us{
+    color: white;
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+}
+
+.about-us img{
+    width: 50%;
+    height: auto;
+}
+
+.about-us .about-detail{
+    padding-left: 40px;
+}
+
+.about-us .about-detail h3{
+    font-family: 'Dancing Script', cursive;
+   
+    font-size: 30px;
+}
+
+.about-us .about-detail h2{
+    font-size: 50px;
+}
+
+.about-us .about-detail p{
+    font-size: 20px;
+}
+
+/* ====================================================== Promotional Fact =============================== */
+
+.fact .fact-wrapper{
+    /* position: absolute; */
+    width: 80%;
+    transform: translate(10%, 0%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 0px;
+    padding: 80px 40px;
+    background-color: transparent;
+}
+
+.fact-container{
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    padding: 10px 0px;
+    /* position: relative; */
+    font-size: 25px;
+    border-radius: 10px;
+    border-bottom: 10px solid gold;
+}
+
+.fact-container span.fact-num{
+    color: gold;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.fact-container span.fact-text{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 0.7em 0;
+    font-weight: 700;
+    line-height: 0;
+}
+
+/* ===================================================== Meet Team ========================================= */
+
+.meet-team h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.meet-team h2{
+    text-align: center;
+    color: white;
+}
+
+.meet-team h4{
+    text-align: center;
+    color: orange;
+}
+
+.meet-team{
+    color: black;
+    text-align: center;
+    padding: 80px 80px;
+}
+
+.meet-team .team-title{
+    color: white;
+    text-align: center;
+}
+
+.meet-team .team-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.meet-team .team-content{
+    object-fit: fill;
+    width: 27%;
+    min-width: 400px;
+    padding: 10px 12px;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 15px 0px;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.meet-team .team-content .team-image{
+    height: 380px;
+    width: 380px;
+}
+
+.meet-team .team-content img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.meet-team .team-content .team-desc{
+    padding: 10px 0px;
+}
+
+/* End About Page */
+
+
+/*========================================================= Media Screen 1120 Laptop Mini ============================================*/
+@media screen and (max-width: 1250px){
+
+    header{
+        background-color: black;
+    }
+
+    /* ========================= navbar ============================ */
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: black;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+    }
+
+    .nav-menu .search-label{
+        display: none;
+    }
+
+    .close{
+        display: flex;
+        align-items: center;
+    }
+
+    nav .active{
+        right: -50px;
+        transition: 0.5s ease;
+    }
+
+    .nav-menu li{
+        margin-bottom: 25px;
+    }
+
+    .nav-icons{
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+
+    .nav-icons i{
+        color: white;
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    /* ========================== Footer ============================ */
+
+    .closing p {
+        text-align: left;
+        font-size: 10px;
+        padding-top: 5px;
+    }
+
+    .closing .logo-close {
+        font-size: 30px;
+    }
+
+    .closing .contact i {
+        font-size: 20px;
+    }
+
+    /* Start About Page */
+
+    .fact .fact-wrapper{
+        width: 85vw;
+    }
+
+    .fact-container{
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 12px;
+    }
+
+    .meet-team .team-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* End About Page */
+
+}
+
+/*========================================================= Media Screen 830 tablet ==============================================*/
+
+@media screen and (max-width : 830px){
+
+    /* Header */
+
+    header {
+        padding: 20px 50px;
+        height: 60px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header .logo span{
+        font-size: 1.5rem;
+    }
+
+
+    /* ========================= navbar ============================ */
+
+    .nav-icons i {
+        font-size: 20px;
+    }
+
+
+    /* Start About Page */
+
+    .text-about {
+        font-size: 30px;
+    }
+
+    .about-us {
+        padding: 40px 80px;
+        flex-direction: column;
+    }
+
+    .about-us img {
+        width: 80%;
+        height: auto;
+    }
+
+    .about-us .about-detail {
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .about-us .about-detail p {
+        font-size: 15px;
+    }
+
+    .fact .fact-wrapper{
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .fact-container{
+        width: calc(50% - 40px);
+        height: 30vmin;
+        font-size: 14px;
+    }
+
+    .meet-team .team-container{
+        grid-template-columns: 1fr;
+    }
+
+
+    /* End About Page */
+
+}
+
+/*========================================================= Media Screen 500 Mobile ============================================*/
+
+@media screen and (max-width : 500px) {
+
+    /* Header */
+
+    .flex {
+        padding: 0px 0px;
+    }
+
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .logo span{
+        font-size: 1rem;
+    }
+
+    /* Start About Page */
+
+    .text-about {
+        font-size: 20px;
+    }
+
+    .fact .fact-wrapper{
+        gap: 15px;
+    }
+
+    .fact-container{
+        width: 100%;
+        height: 25vmin;
+        font-size: 8px;
+    }
+
+    /* End About Page */
+
+}
